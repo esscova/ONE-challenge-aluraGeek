@@ -1,0 +1,11 @@
+.navegacao__container-input{    
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--preto-05);
+    background-image: url(../../image/header/lupa.svg);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+.navegacao__busca--input::placeholder{
+    color: var(--preto-50);
+}

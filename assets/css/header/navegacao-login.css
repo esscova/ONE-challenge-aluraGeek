@@ -1,0 +1,6 @@
+.navegacao__login{
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid var(--azul-100);
+    cursor: pointer;
+}
