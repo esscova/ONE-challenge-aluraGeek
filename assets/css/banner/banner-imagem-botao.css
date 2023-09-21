@@ -1,0 +1,10 @@
+.banner__imagem--botao{
+    color: var(--branco);
+    background-color: var(--azul-100);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    width: 119px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+}

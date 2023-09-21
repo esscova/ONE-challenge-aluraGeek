@@ -1,0 +1,11 @@
+.banner__imagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    height: 192px;
+    padding: 1rem;
+    background-image: url(../../image/banner/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
