@@ -1,0 +1,341 @@
+.section-star-wars, .section-consoles, .section-diversos {
+  max-width: 1240px;
+  margin: 44px auto;
+  padding: 5px 12px;
+}
+
+.produto-especifico {
+  background-color: #f5f5f5;
+}
+
+.ajuste-produto-detalhe {
+  max-width: 1240px;
+  margin: auto;
+  padding: 64px 32px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulo h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #464646;
+}
+
+.titulo a {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a7ae4;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+
+}
+
+.produtos {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+}
+
+.produtos li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.titulo-espaço {
+  margin: 20px 0;
+}
+
+.titulo-espaço a {
+  color: #fff;
+  background-color: #2a7ae4;
+  padding: 18px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.botao-remover, .editar {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2a7ae4;
+  border: none;
+  text-align: center;
+}
+
+.todos-produtos {
+  max-width: 1240px;
+  margin: auto;
+  padding: 64px 10px;
+}
+
+.lista-todos-produtos {
+  display: flex;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px 22px;
+}
+
+.lista-todos-produtos li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.lista-todos-produtos li img {
+  height: 172px;
+  width: 176px;
+}
+
+.produto-nome {
+  font-size: 14px;
+  font-weight: 500;
+  color: #464646;
+}
+
+.span-bold {
+  font-size: 16px;
+  font-weight: 700;
+  color: #464646;
+}
+
+.produtos li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a7ae4;
+}
+
+.produto-descricao {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  gap: 16px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.produto-descricao img {
+  height: 400px;
+}
+
+.produto-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto-direita h1 {
+  font-size: 52px;
+  font-weight: 500;
+  color: #464646;
+}
+
+.produto-direita span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.produto-direita p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.removendo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #2a7ae4;
+  padding: 20px;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+}
+
+.div-remove {
+  display: flex;
+}
+
+.deletar {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #2a7ae4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.nao-deletar {
+  padding: 10px 35px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #2a7ae4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.nao-deletar:hover, .deletar:hover {
+  background-color: #5595e9;
+}
+
+.removendo .span-remover {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.removendo button {
+  margin: 5px;
+}
+
+@media (max-width: 1240px) {
+
+  .produtos li:nth-child(5),
+  .produtos li:nth-child(6) {
+    display: none;
+  }
+
+  .section-star-wars {
+    margin: 10px 0 0 0;
+  }
+
+  .section-consoles {
+    margin: 10px 0;
+  }
+
+  .section-diversos {
+    margin: 0 0 30px 0;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+@media (max-width: 950px) {
+
+  .section-star-wars,
+  .section-consoles,
+  .section-diversos {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .produtos {
+    align-items: center;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    padding:  5ch 0;
+  }
+
+  .produtos li img {
+    width: 80%;
+  }
+
+  .titulo {
+    padding: 5px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .produto-descricao img {
+    height: 172px;
+    width: 176px;
+  }
+
+  .produto-direita h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .produtos {
+    align-items: center;
+    display: grid;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+
+  .produto img p a {
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 380;
+  }
+
+  .produto p a {
+    align-items: center;
+    margin: 10px;
+  }
+
+  .titulo h3 {
+    font-size: 22px;
+  }
+
+  .titulo a {
+    align-items: center;
+    text-align: center;
+    order: 1;
+  }
+
+  .removendo,
+  .div-remove {
+    flex-direction: column;
+  }
+
+  .footer__info {
+    width: 300px;
+    padding: 10px;
+  }
+}
+.produto{
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem-produto {
+  height: 200px;
+  width: 180px;
+}

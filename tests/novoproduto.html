@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário teste</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1rem;
+            gap: .5rem;
+            width: 400px;
+            margin: 0 auto;
+        }
+        form>div{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        input, textarea, button, select{
+            padding: 1rem;
+            border-radius: 8px;
+        }   
+
+        .confirmar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; 
+            padding: 1rem;            
+        }
+
+        select {
+            width: 150px;
+        }
+
+        button {
+            color: white;
+            background-color: darkgreen;
+            width: 150px; 
+            margin-left: auto; 
+        }
+
+    
+    </style>
+</head>
+<body>
+    <form action="#" method="POST" class="card-form">
+        <h2>Formulário teste</h2>
+
+        <div>
+            <label for="url">URL da imagem</label>
+            <input type="text" id="url" name="url" required>
+        </div>
+
+        <div>
+            <label for="nomeProduto">Nome do produto</label>
+            <input type="text" id="nomeProduto" name="nomeProduto" required>
+        </div>
+
+        <div>
+            <label for="preco">Preço</label>
+            <input type="text" id="preco" name="preco" required>
+        </div>
+
+        <div>
+            <label for="descricao">Descrição do produto</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+        </div>
+        
+        <div class="confirmar">
+            <div>
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="starwars">Star Wars</option>
+                    <option value="consoles">Consoles</option>
+                    <option value="diversos">Diversos</option>
+                </select>
+            </div>
+            <button type="submit" id="adicionarProduto">Adicionar produto</button>
+        </div>
+    </form>
+        
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.card-form');
+  const adicionarProdutoBtn = document.getElementById('adicionarProduto');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    // valores dos campos do formulário
+    const imageUrl = document.getElementById('url').value;
+    const categoria = document.getElementById('categoria').value;
+    const nomeProduto = document.getElementById('nomeProduto').value;
+    const preco = document.getElementById('preco').value;
+    const descricao = document.getElementById('descricao').value;
+
+    // objeto com os valores do formulário
+    const novoProduto = {
+        imageUrl: imageUrl.startsWith('http://') || imageUrl.startsWith('https://')
+        ? imageUrl 
+        : `../../${imageUrl}`, 
+      section: categoria,
+      name: nomeProduto,
+      price: preco,
+      description: descricao,
+    };
+
+    // POST
+    const response = await fetch('http://localhost:3000/produto', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(novoProduto),
+    });
+
+    if (response.ok) {
+      alert('Produto adicionado com sucesso!');
+        window.location.href = '../index.html'; 
+    } else {
+        alert('Erro ao adicionar o produto. Tente novamente.');
+    }
+  });
+});
+
+    </script>
+</body>
+</html>

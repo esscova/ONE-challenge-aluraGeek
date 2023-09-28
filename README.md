@@ -1,3 +1,10 @@
-# ONE challenge aluraGeek
+# alura_geek-2023
 
-Repositório com desafio da formação FrontEnd ONE
+- Projeto em desenvolvimento para concluir o Alura Challenge
+
+![preview](./.github/preview.png)
+
+- Usuário: admin
+- Senha: admin
+
+
